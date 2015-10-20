@@ -1925,8 +1925,8 @@ namespace MissionPlanner.GCSViews
 
                 ((ProgressReporterDialogue)sender).UpdateProgressAndStatus(95, "Setting params");
 
-                // m
-                port.setParam("WP_RADIUS", (byte)int.Parse(TXT_WPRad.Text) / CurrentState.multiplierdist);
+                // cm's
+                port.setParam("WP_RADIUS", (byte)int.Parse(TXT_WPRad.Text) / CurrentState.multiplierdist * 100);
 
                 // cm's
                 port.setParam("WPNAV_RADIUS", (byte)int.Parse(TXT_WPRad.Text) / CurrentState.multiplierdist * 100);
